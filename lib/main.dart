@@ -4,14 +4,15 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blueGrey[700],
         title: Text(
           "this is dakhakhny",
         ),
       ),
+      backgroundColor: Colors.blueGrey[300],
       body: Center(
         child: Image(
-          image:
-              NetworkImage('https://source.unsplash.com/Y-joaXX7XCQ/1600x900'),
+          image: AssetImage('images/diamond.png'),
         ),
       ),
     ),
