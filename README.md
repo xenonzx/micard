@@ -1,6 +1,8 @@
 # anglacoursetest1
 
-A new Flutter application.
+A Flutter application to display what I can do with flutter.
+
+using flutter_svg
 
 ## Getting Started
 

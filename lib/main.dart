@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,33 +25,70 @@ class LayoutChanllenge extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           color: Colors.teal,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                width: 100,
-                height: double.infinity,
-                color: Colors.red,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('images/my_pic.jpeg'),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 100,
-                    height: 100,
-                    color: Colors.yellow,
-                  ),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    color: Colors.green,
-                  ),
-                ],
+              Text(
+                "Ahmed EL-Dakhakhny",
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+              Text(
+                "SOFTWARE ENGINEER",
+                style: TextStyle(
+                    fontFamily: 'Sanspro',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16),
               ),
               Container(
-                width: 100,
-                height: double.infinity,
-                color: Colors.blue,
+                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                color: Colors.white,
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.phone),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text("+021115972875"),
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                color: Colors.white,
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.mail),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text("ahmd.eldakhakhny@gmail.com"),
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                color: Colors.white,
+                child: Row(
+                  children: <Widget>[
+                    SvgPicture.asset('images/github.svg',
+                        semanticsLabel: 'Acme Logo'),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text("https://github.com/xenonzx/"),
+                  ],
+                ),
               ),
             ],
           ),
