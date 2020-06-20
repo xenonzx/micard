@@ -48,46 +48,59 @@ class LayoutChanllenge extends StatelessWidget {
                     fontSize: 16),
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(Icons.phone),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text("+021115972875"),
-                  ],
+                width: 170,
+                child: Divider(
+                  color: Colors.white,
                 ),
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(Icons.mail),
-                    SizedBox(
-                      width: 10,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "+021115972875",
+                    style: TextStyle(
+                      fontFamily: 'Sanspro',
+                      color: Colors.teal,
                     ),
-                    Text("ahmd.eldakhakhny@gmail.com"),
-                  ],
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    SvgPicture.asset('images/github.svg',
-                        semanticsLabel: 'Acme Logo'),
-                    SizedBox(
-                      width: 10,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "ahmd.eldakhakhny@gmail.com",
+                    style: TextStyle(
+                      fontFamily: 'Sanspro',
+                      color: Colors.teal,
                     ),
-                    Text("https://github.com/xenonzx/"),
-                  ],
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                color: Colors.white,
+                child: ListTile(
+                  leading: SvgPicture.asset(
+                    'images/github.svg',
+                    color: Colors.teal,
+                    semanticsLabel: 'Acme Logo',
+                  ),
+                  title: Text("https://github.com/xenonzx/",
+                      style: TextStyle(
+                        fontFamily: 'Sanspro',
+                        color: Colors.teal,
+                      )),
                 ),
               ),
             ],
